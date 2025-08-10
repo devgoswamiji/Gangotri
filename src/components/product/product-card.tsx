@@ -32,7 +32,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <h3 className="font-headline text-lg font-medium leading-tight text-foreground">
             {product.title}
           </h3>
-          <p className="mt-2 text-base font-semibold text-primary/90 text-glow">
+          <p className="mt-2 text-base font-semibold text-primary/90">
             {new Intl.NumberFormat('en-US', {
               style: 'currency',
               currency: product.currency,

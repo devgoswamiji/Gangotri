@@ -11,7 +11,7 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Link href="/" className="mb-4 inline-flex items-center gap-2">
               <Gem className="h-6 w-6 text-primary" />
-              <span className="font-headline text-2xl font-bold text-glow text-primary">
+              <span className="font-headline text-2xl font-bold text-primary">
                 Gangotri Jewellers
               </span>
             </Link>

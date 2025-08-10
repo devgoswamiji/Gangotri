@@ -47,7 +47,7 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Gem className="h-6 w-6 text-primary" />
-          <span className="font-headline text-2xl font-bold tracking-tight text-glow text-primary">
+          <span className="font-headline text-2xl font-bold tracking-tight text-primary">
             Gangotri Jewellers
           </span>
         </Link>
@@ -78,7 +78,7 @@ export function Header() {
                 <div className="flex flex-col gap-8 pt-12">
                      <Link href="/" className="flex items-center gap-2 mb-4">
                         <Gem className="h-6 w-6 text-primary" />
-                        <span className="font-headline text-2xl font-bold tracking-tight text-glow text-primary">
+                        <span className="font-headline text-2xl font-bold tracking-tight text-primary">
                             Gangotri Jewellers
                         </span>
                     </Link>

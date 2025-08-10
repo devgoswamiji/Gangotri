@@ -38,7 +38,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
         alt={`${product.title} - ${selectedVariant.metal}`}
       />
       <div className="py-4">
-        <h1 className="font-headline text-4xl font-bold lg:text-5xl text-glow text-primary">
+        <h1 className="font-headline text-4xl font-bold lg:text-5xl text-primary">
           {product.title}
         </h1>
         <p className="mt-4 text-3xl font-light text-foreground">

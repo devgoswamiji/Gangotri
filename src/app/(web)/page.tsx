@@ -25,7 +25,7 @@ export default function HomePage() {
         </video>
 
         <div className="container text-primary-foreground">
-          <h1 className="font-headline text-5xl font-bold md:text-7xl text-primary text-glow">
+          <h1 className="font-headline text-5xl font-bold md:text-7xl text-primary">
             Where Tradition Meets Timeless Elegance
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-foreground/80">
@@ -39,7 +39,7 @@ export default function HomePage() {
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container px-4 md:px-6">
-          <h2 className="text-center font-headline text-4xl font-bold text-glow text-primary">
+          <h2 className="text-center font-headline text-4xl font-bold text-primary">
             Featured Jewellery
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
