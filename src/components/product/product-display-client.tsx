@@ -38,7 +38,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
         alt={`${product.title} - ${selectedVariant.metal}`}
       />
       <div className="py-4">
-        <h1 className="font-headline text-4xl font-bold lg:text-5xl">
+        <h1 className="font-headline text-4xl font-bold lg:text-5xl text-glow text-primary">
           {product.title}
         </h1>
         <p className="mt-4 text-3xl font-light text-foreground">
@@ -85,7 +85,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
 
         <div className="mt-8 flex items-stretch gap-4">
           <Button size="lg" className="flex-1" onClick={handleAddToCart}>
-            Reserve the {product.title.split(" ")[0]}
+            Add to Bag
           </Button>
           <Button size="lg" variant="outline" className="px-4">
             <Heart className="h-6 w-6" />
@@ -109,7 +109,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
               <ul className="list-disc space-y-1 pl-5">
                 <li>Metal: {selectedVariant.metal}</li>
                 <li>SKU: {selectedVariant.sku}</li>
-                <li>Hand-crafted in Italy</li>
+                <li>Hand-crafted in India</li>
                 <li>Conflict-free gemstones</li>
               </ul>
             </AccordionContent>

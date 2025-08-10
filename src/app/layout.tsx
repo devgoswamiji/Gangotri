@@ -11,9 +11,9 @@ const alegreya = Alegreya({
 });
 
 export const metadata: Metadata = {
-  title: 'Aurelia Atelier — Ultra-premium jewellery',
+  title: 'Gangotri Jewellers & Arts — Exquisite Indian Jewellery',
   description:
-    'Discover exquisite, handcrafted jewellery at Aurelia Atelier. Explore our collections and customize your unique piece with our 3D configurator.',
+    'Discover exquisite, handcrafted jewellery at Gangotri Jewellers & Arts. Explore our collections of traditional and modern designs.',
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(alegreya.variable, 'scroll-smooth', 'dark')}>
+    <html lang="en" className={cn(alegreya.variable, 'scroll-smooth')}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

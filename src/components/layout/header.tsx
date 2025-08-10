@@ -33,7 +33,7 @@ export function Header() {
           href={link.href}
           className={cn(
             'hover:text-primary transition-colors',
-            pathname === link.href && 'text-primary'
+            pathname === link.href && 'text-primary font-semibold'
           )}
         >
           {link.label}
@@ -47,8 +47,8 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Gem className="h-6 w-6 text-primary" />
-          <span className="font-headline text-2xl font-bold tracking-tight">
-            Aurelia Atelier
+          <span className="font-headline text-2xl font-bold tracking-tight text-glow text-primary">
+            Gangotri Jewellers
           </span>
         </Link>
         <div className="hidden md:flex flex-1 justify-center">
@@ -78,8 +78,8 @@ export function Header() {
                 <div className="flex flex-col gap-8 pt-12">
                      <Link href="/" className="flex items-center gap-2 mb-4">
                         <Gem className="h-6 w-6 text-primary" />
-                        <span className="font-headline text-2xl font-bold tracking-tight">
-                            Aurelia Atelier
+                        <span className="font-headline text-2xl font-bold tracking-tight text-glow text-primary">
+                            Gangotri Jewellers
                         </span>
                     </Link>
                     <NavLinks className="flex-col !items-start gap-4 text-lg" />

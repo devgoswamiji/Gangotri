@@ -11,8 +11,8 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Link href="/" className="mb-4 inline-flex items-center gap-2">
               <Gem className="h-6 w-6 text-primary" />
-              <span className="font-headline text-2xl font-bold">
-                Aurelia Atelier
+              <span className="font-headline text-2xl font-bold text-glow text-primary">
+                Gangotri Jewellers
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
@@ -52,7 +52,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between border-t border-border/50 pt-8 sm:flex-row">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Aurelia Atelier. All rights reserved.
+            &copy; {new Date().getFullYear()} Gangotri Jewellers & Arts. All rights reserved.
           </p>
           <div className="mt-4 flex space-x-4 sm:mt-0">
             <Link href="#" aria-label="Twitter"><Twitter className="h-5 w-5 text-muted-foreground hover:text-primary" /></Link>
