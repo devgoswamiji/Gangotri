@@ -38,14 +38,6 @@ export function ProductCard({ product }: ProductCardProps) {
               currency: product.currency,
             }).format(firstVariant.price)}
           </p>
-          <div className="mt-4 flex justify-between items-center">
-            <Button variant="secondary" className="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                View in 360°
-            </Button>
-             <Button variant="ghost" size="icon" className="text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent">
-                <ArrowRight />
-            </Button>
-          </div>
         </CardContent>
       </Card>
     </Link>
