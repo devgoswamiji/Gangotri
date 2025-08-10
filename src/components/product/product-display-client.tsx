@@ -74,7 +74,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
                 />
                 <Label
                   htmlFor={variant.id}
-                  className="flex cursor-pointer flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+                  className="flex cursor-pointer flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                 >
                   {variant.metal}
                 </Label>
@@ -97,7 +97,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
             <AccordionTrigger className="font-headline text-lg">
               Description
             </AccordionTrigger>
-            <AccordionContent className="prose prose-sm max-w-none text-muted-foreground">
+            <AccordionContent className="prose prose-sm max-w-none text-muted-foreground prose-invert">
               {product.longDescription}
             </AccordionContent>
           </AccordionItem>

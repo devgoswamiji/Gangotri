@@ -4,49 +4,49 @@
 
 @layer base {
   :root {
-    --background: 40 100% 98%; /* Light Ivory */
-    --foreground: 20 14% 10%; /* Dark Brown-Black */
-    --card: 40 100% 98%;
-    --card-foreground: 20 14% 10%;
-    --popover: 40 100% 98%;
-    --popover-foreground: 20 14% 10%;
-    --primary: 40 90% 55%; /* Champagne Gold */
-    --primary-foreground: 20 14% 10%;
-    --secondary: 25 90% 75%; /* Royal Peach */
-    --secondary-foreground: 20 14% 10%;
-    --muted: 30 80% 95%;
-    --muted-foreground: 20 10% 40%;
-    --accent: 340 82% 76%; /* Soft Rose Pink */
-    --accent-foreground: 20 14% 10%;
+    --background: 240 10% 3.9%; /* Midnight Black */
+    --foreground: 48 90% 95%; /* Champagne Cream */
+    --card: 240 10% 6%;
+    --card-foreground: 48 90% 95%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 48 90% 95%;
+    --primary: 51 100% 50%; /* 24k Gold */
+    --primary-foreground: 240 10% 3.9%;
+    --secondary: 48 70% 88%; /* Soft Champagne Cream */
+    --secondary-foreground: 240 10% 3.9%;
+    --muted: 240 5% 15%;
+    --muted-foreground: 48 10% 65%;
+    --accent: 51 100% 60%; 
+    --accent-foreground: 240 10% 3.9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --border: 40 90% 55% / 0.2;
-    --input: 40 30% 90%;
-    --ring: 40 90% 55%;
+    --border: 51 100% 50% / 0.2;
+    --input: 240 5% 15%;
+    --ring: 51 100% 50%;
     --radius: 0.5rem;
   }
 
   .dark {
-    /* Keeping dark theme variables for potential future use, but default is light */
-    --background: 224 71% 4%; 
-    --foreground: 210 40% 98%;
-    --card: 224 71% 8%; 
-    --card-foreground: 210 40% 98%;
-    --popover: 224 71% 4%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 45 93% 47.5%; 
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 45 93% 47.5%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Keeping dark theme variables for consistency, using the new dark theme as default */
+    --background: 240 10% 3.9%;
+    --foreground: 48 90% 95%;
+    --card: 240 10% 6%;
+    --card-foreground: 48 90% 95%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 48 90% 95%;
+    --primary: 51 100% 50%;
+    --primary-foreground: 240 10% 3.9%;
+    --secondary: 48 70% 88%;
+    --secondary-foreground: 240 10% 3.9%;
+    --muted: 240 5% 15%;
+    --muted-foreground: 48 10% 65%;
+    --accent: 51 100% 60%;
+    --accent-foreground: 240 10% 3.9%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 45 93% 47.5%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 51 100% 50% / 0.2;
+    --input: 240 5% 15%;
+    --ring: 51 100% 50%;
   }
 }
 

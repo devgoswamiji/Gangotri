@@ -15,28 +15,25 @@ import {
 export default function HomePage() {
   const featuredProducts = products.slice(0, 4);
   const lookbookProducts = products.slice(0, 6);
-  const craftworkProducts = products.slice(0, 5);
-
 
   return (
     <>
-      <section className="relative w-full h-[80vh] min-h-[600px] md:h-screen text-center flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-amber-50/50 pt-20">
+      <section className="relative w-full h-[80vh] min-h-[600px] md:h-screen text-center flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-black pt-20">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 -z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10 z-0" />
-        {/* Placeholder for cinematic video loop */}
-        <Image 
-          src="https://placehold.co/1920x1080.png" 
-          alt="Cinematic jewelry background"
-          layout="fill"
-          objectFit="cover"
-          className="absolute inset-0 w-full h-full object-cover -z-20 opacity-30"
-          data-ai-hint="jewelry cinematic lighting"
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 z-0" />
+        <video 
+          src="https://firebasestorage.googleapis.com/v0/b/aurelia-atelier-prod.appspot.com/o/assets%2Fhero-video-3.mp4?alt=media&token=481a54a6-4078-430c-a98c-13491c107e30"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover -z-20 opacity-40"
         />
 
         <div className="container text-foreground z-10">
           <div className="flex items-center justify-center gap-4">
             <Gem className="h-10 w-10 text-primary" />
-             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-primary">
+            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-primary">
               Gangotri Jewellers & Arts
             </h1>
           </div>
@@ -84,7 +81,7 @@ export default function HomePage() {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         data-ai-hint="model jewelry editorial"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <Button variant="secondary">Shop this Look</Button>
                       </div>
                     </div>
@@ -98,7 +95,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-secondary/20">
+      <section className="py-16 md:py-24 bg-card">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-center font-headline text-4xl font-bold text-primary">
@@ -141,28 +138,28 @@ export default function HomePage() {
         </div>
       </section>
 
-       <section className="py-16 md:py-24 bg-secondary/20">
+       <section className="py-16 md:py-24 bg-card">
         <div className="container px-4 md:px-6">
           <h2 className="text-center font-headline text-4xl font-bold text-primary">
             What Our Patrons Say
           </h2>
            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-card border border-border/50 rounded-lg p-6 text-center shadow-lg">
-                 <div className="flex justify-center text-yellow-400 mb-4">
+            <div className="bg-background border border-border/50 rounded-lg p-6 text-center shadow-lg">
+                 <div className="flex justify-center text-primary mb-4">
                     <Star /><Star /><Star /><Star /><Star />
                  </div>
                  <p className="text-muted-foreground">"The most exquisite necklace I have ever owned. The craftsmanship is simply breathtaking. A true heirloom piece."</p>
                  <p className="font-bold text-primary mt-4">- Priya S.</p>
             </div>
-             <div className="bg-card border border-border/50 rounded-lg p-6 text-center shadow-lg">
-                 <div className="flex justify-center text-yellow-400 mb-4">
+             <div className="bg-background border border-border/50 rounded-lg p-6 text-center shadow-lg">
+                 <div className="flex justify-center text-primary mb-4">
                     <Star /><Star /><Star /><Star /><Star />
                  </div>
                  <p className="text-muted-foreground">"From the moment I walked in, I was treated like royalty. Their collection is vast and stunning. Found the perfect ring!"</p>
                  <p className="font-bold text-primary mt-4">- Rahul M.</p>
             </div>
-             <div className="bg-card border border-border/50 rounded-lg p-6 text-center shadow-lg">
-                 <div className="flex justify-center text-yellow-400 mb-4">
+             <div className="bg-background border border-border/50 rounded-lg p-6 text-center shadow-lg">
+                 <div className="flex justify-center text-primary mb-4">
                     <Star /><Star /><Star /><Star /><Star />
                  </div>
                  <p className="text-muted-foreground">"An experience of a lifetime. The team at Gangotri helped me customize my bridal set. It's more beautiful than I imagined."</p>

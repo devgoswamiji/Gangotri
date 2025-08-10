@@ -25,7 +25,7 @@ export function ProductCard({ product }: ProductCardProps) {
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               data-ai-hint="jewelry 3d render"
             />
-             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/20 to-transparent" />
+             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent" />
           </div>
         </CardHeader>
         <CardContent className="p-4">

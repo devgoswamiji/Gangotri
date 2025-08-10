@@ -74,7 +74,7 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="bg-background">
+            <SheetContent side="left" className="bg-background/95">
                 <div className="flex flex-col gap-8 pt-12">
                      <Link href="/" className="flex items-center gap-2 mb-4">
                         <Gem className="h-6 w-6 text-primary" />
