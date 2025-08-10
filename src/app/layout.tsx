@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(alegreya.variable, 'scroll-smooth')}>
+    <html lang="en" className={cn(alegreya.variable, 'scroll-smooth', 'dark')}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
