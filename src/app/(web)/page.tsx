@@ -18,22 +18,14 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative w-full h-[80vh] min-h-[600px] md:h-screen text-center flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-black pt-20">
+      <section className="relative w-full h-[80vh] min-h-[600px] md:h-screen text-center flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-secondary pt-20">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 -z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 z-0" />
-        <video 
-          src="https://firebasestorage.googleapis.com/v0/b/aurelia-atelier-prod.appspot.com/o/assets%2Fhero-video-3.mp4?alt=media&token=481a54a6-4078-430c-a98c-13491c107e30"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover -z-20 opacity-40"
-        />
-
+        <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-background/20 z-0" />
+        
         <div className="container text-foreground z-10">
           <div className="flex items-center justify-center gap-4">
-            <Gem className="h-10 w-10 text-primary" />
-            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-primary">
+            <Gem className="h-10 w-10 text-accent" />
+            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-accent">
               Gangotri Jewellers & Arts
             </h1>
           </div>
@@ -41,7 +33,7 @@ export default function HomePage() {
             Where Tradition Meets Timeless Brilliance
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-primary/30 transition-shadow duration-300">
+            <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
               <Link href="/shop">Explore Collections</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full">
@@ -72,7 +64,7 @@ export default function HomePage() {
               {lookbookProducts.map((_, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <div className="relative group aspect-square overflow-hidden rounded-lg">
+                    <div className="relative group aspect-square overflow-hidden rounded-lg bg-secondary">
                       <Image 
                         src={`https://placehold.co/800x800.png`} 
                         alt="Lookbook" 
@@ -81,8 +73,8 @@ export default function HomePage() {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         data-ai-hint="model jewelry editorial"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Button variant="secondary">Shop this Look</Button>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <Button>Shop this Look</Button>
                       </div>
                     </div>
                   </div>
@@ -111,7 +103,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg">
               <Link href="/shop">View All Products</Link>
             </Button>
           </div>
@@ -144,22 +136,22 @@ export default function HomePage() {
             What Our Patrons Say
           </h2>
            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-background border border-border/50 rounded-lg p-6 text-center shadow-lg">
-                 <div className="flex justify-center text-primary mb-4">
+            <div className="bg-background border rounded-lg p-6 text-center shadow-lg">
+                 <div className="flex justify-center text-accent mb-4">
                     <Star /><Star /><Star /><Star /><Star />
                  </div>
                  <p className="text-muted-foreground">"The most exquisite necklace I have ever owned. The craftsmanship is simply breathtaking. A true heirloom piece."</p>
                  <p className="font-bold text-primary mt-4">- Priya S.</p>
             </div>
-             <div className="bg-background border border-border/50 rounded-lg p-6 text-center shadow-lg">
-                 <div className="flex justify-center text-primary mb-4">
+             <div className="bg-background border rounded-lg p-6 text-center shadow-lg">
+                 <div className="flex justify-center text-accent mb-4">
                     <Star /><Star /><Star /><Star /><Star />
                  </div>
                  <p className="text-muted-foreground">"From the moment I walked in, I was treated like royalty. Their collection is vast and stunning. Found the perfect ring!"</p>
                  <p className="font-bold text-primary mt-4">- Rahul M.</p>
             </div>
-             <div className="bg-background border border-border/50 rounded-lg p-6 text-center shadow-lg">
-                 <div className="flex justify-center text-primary mb-4">
+             <div className="bg-background border rounded-lg p-6 text-center shadow-lg">
+                 <div className="flex justify-center text-accent mb-4">
                     <Star /><Star /><Star /><Star /><Star />
                  </div>
                  <p className="text-muted-foreground">"An experience of a lifetime. The team at Gangotri helped me customize my bridal set. It's more beautiful than I imagined."</p>
@@ -170,3 +162,4 @@ export default function HomePage() {
        </section>
     </>
   );
+}

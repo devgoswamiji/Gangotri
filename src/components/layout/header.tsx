@@ -32,8 +32,8 @@ export function Header() {
           key={link.href}
           href={link.href}
           className={cn(
-            'hover:text-primary transition-colors',
-            pathname === link.href && 'text-primary font-semibold'
+            'hover:text-accent transition-colors',
+            pathname === link.href && 'text-accent font-semibold'
           )}
         >
           {link.label}
@@ -46,8 +46,8 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-border/50 bg-background/80 backdrop-blur-sm">
       <div className="container flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Gem className="h-6 w-6 text-primary" />
-          <span className="font-headline text-2xl font-bold tracking-tight text-primary">
+          <Gem className="h-6 w-6 text-accent" />
+          <span className="font-headline text-2xl font-bold tracking-tight text-accent">
             Gangotri Jewellers
           </span>
         </Link>
@@ -77,8 +77,8 @@ export function Header() {
             <SheetContent side="left" className="bg-background/95">
                 <div className="flex flex-col gap-8 pt-12">
                      <Link href="/" className="flex items-center gap-2 mb-4">
-                        <Gem className="h-6 w-6 text-primary" />
-                        <span className="font-headline text-2xl font-bold tracking-tight text-primary">
+                        <Gem className="h-6 w-6 text-accent" />
+                        <span className="font-headline text-2xl font-bold tracking-tight text-accent">
                             Gangotri Jewellers
                         </span>
                     </Link>

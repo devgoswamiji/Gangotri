@@ -41,7 +41,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
         <h1 className="font-headline text-4xl font-bold lg:text-5xl text-primary">
           {product.title}
         </h1>
-        <p className="mt-4 text-3xl font-light text-foreground">
+        <p className="mt-4 text-3xl font-light text-accent">
           {new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: product.currency,
@@ -74,7 +74,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
                 />
                 <Label
                   htmlFor={variant.id}
-                  className="flex cursor-pointer flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+                  className="flex cursor-pointer flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-secondary hover:text-secondary-foreground peer-data-[state=checked]:border-primary peer-data-[state=checked]:text-primary [&:has([data-state=checked])]:border-primary"
                 >
                   {variant.metal}
                 </Label>
@@ -94,15 +94,15 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
 
         <Accordion type="single" collapsible className="mt-8 w-full" defaultValue="description">
           <AccordionItem value="description">
-            <AccordionTrigger className="font-headline text-lg">
+            <AccordionTrigger className="font-headline text-lg text-primary">
               Description
             </AccordionTrigger>
-            <AccordionContent className="prose prose-sm max-w-none text-muted-foreground prose-invert">
+            <AccordionContent className="prose prose-sm max-w-none text-muted-foreground">
               {product.longDescription}
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="details">
-            <AccordionTrigger className="font-headline text-lg">
+            <AccordionTrigger className="font-headline text-lg text-primary">
               Product Details
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
@@ -115,7 +115,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="shipping">
-            <AccordionTrigger className="font-headline text-lg">
+            <AccordionTrigger className="font-headline text-lg text-primary">
               Shipping & Returns
             </AccordionTrigger>
             <AccordionContent className="space-y-2 text-muted-foreground">

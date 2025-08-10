@@ -4,49 +4,58 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%; /* Midnight Black */
-    --foreground: 48 90% 95%; /* Champagne Cream */
-    --card: 240 10% 6%;
-    --card-foreground: 48 90% 95%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 48 90% 95%;
-    --primary: 51 100% 50%; /* 24k Gold */
-    --primary-foreground: 240 10% 3.9%;
-    --secondary: 48 70% 88%; /* Soft Champagne Cream */
-    --secondary-foreground: 240 10% 3.9%;
-    --muted: 240 5% 15%;
-    --muted-foreground: 48 10% 65%;
-    --accent: 51 100% 60%; 
+    --background: 33 44% 97%; /* Pearl Cream */
+    --foreground: 240 10% 3.9%; /* Rich Black/Deep Charcoal */
+
+    --card: 33 44% 97%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 33 44% 97%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 177 71% 14%; /* Deep Emerald Green */
+    --primary-foreground: 45 61% 90%; /* Soft Gold for Text */
+
+    --secondary: 33 20% 90%; /* Lighter Cream for secondary elements */
+    --secondary-foreground: 177 71% 14%;
+
+    --muted: 33 15% 85%;
+    --muted-foreground: 240 5% 45%;
+    
+    --accent: 45 74% 52%; /* Rich Metallic Gold for accents */
     --accent-foreground: 240 10% 3.9%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --border: 51 100% 50% / 0.2;
-    --input: 240 5% 15%;
-    --ring: 51 100% 50%;
+
+    --border: 33 20% 88%;
+    --input: 33 20% 92%;
+    --ring: 177 71% 14%;
+    
     --radius: 0.5rem;
   }
 
   .dark {
-    /* Keeping dark theme variables for consistency, using the new dark theme as default */
+    /* Keeping dark theme variables for consistency, but light is default now */
     --background: 240 10% 3.9%;
-    --foreground: 48 90% 95%;
+    --foreground: 33 44% 97%;
     --card: 240 10% 6%;
-    --card-foreground: 48 90% 95%;
+    --card-foreground: 33 44% 97%;
     --popover: 240 10% 3.9%;
-    --popover-foreground: 48 90% 95%;
-    --primary: 51 100% 50%;
-    --primary-foreground: 240 10% 3.9%;
-    --secondary: 48 70% 88%;
-    --secondary-foreground: 240 10% 3.9%;
+    --popover-foreground: 33 44% 97%;
+    --primary: 177 71% 25%;
+    --primary-foreground: 45 61% 90%;
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 33 44% 97%;
     --muted: 240 5% 15%;
-    --muted-foreground: 48 10% 65%;
-    --accent: 51 100% 60%;
+    --muted-foreground: 33 10% 65%;
+    --accent: 45 74% 52%;
     --accent-foreground: 240 10% 3.9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-    --border: 51 100% 50% / 0.2;
+    --border: 240 5% 25%;
     --input: 240 5% 15%;
-    --ring: 51 100% 50%;
+    --ring: 177 71% 25%;
   }
 }
 
