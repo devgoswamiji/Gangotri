@@ -18,9 +18,8 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative w-full h-[80vh] min-h-[600px] md:h-screen text-center flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-secondary pt-20">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10 -z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-background/20 z-0" />
+      <section className="relative w-full h-[80vh] min-h-[600px] md:h-screen text-center flex items-center justify-center overflow-hidden pt-20">
+        <div className="absolute inset-0 bg-transparent -z-10" />
         
         <div className="container text-foreground z-10">
           <div className="flex items-center justify-center gap-4">
@@ -43,7 +42,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background z-10 relative">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-center font-headline text-4xl font-bold text-primary">
@@ -87,7 +86,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card z-10 relative">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-center font-headline text-4xl font-bold text-primary">
@@ -110,7 +109,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-background py-16 md:py-24">
+      <section className="bg-background py-16 md:py-24 z-10 relative">
         <div className="container px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <div>
@@ -130,7 +129,7 @@ export default function HomePage() {
         </div>
       </section>
 
-       <section className="py-16 md:py-24 bg-card">
+       <section className="py-16 md:py-24 bg-card z-10 relative">
         <div className="container px-4 md:px-6">
           <h2 className="text-center font-headline text-4xl font-bold text-primary">
             What Our Patrons Say
