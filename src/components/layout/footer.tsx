@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 
 export function Footer() {
   return (
-    <footer className="border-t bg-card">
+    <footer className="border-t border-border/50 bg-secondary/20">
       <div className="container py-12 px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -50,7 +50,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between border-t pt-8 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between border-t border-border/50 pt-8 sm:flex-row">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Aurelia Atelier. All rights reserved.
           </p>

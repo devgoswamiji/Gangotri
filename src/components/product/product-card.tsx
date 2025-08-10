@@ -12,7 +12,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Link href={`/products/${product.slug}`} className="group block">
-      <Card className="h-full overflow-hidden rounded-lg border-none shadow-sm transition-shadow duration-300 hover:shadow-lg">
+      <Card className="h-full overflow-hidden rounded-lg border-border/50 bg-card shadow-sm transition-shadow duration-300 hover:shadow-lg hover:shadow-primary/10">
         <CardHeader className="p-0">
           <div className="relative aspect-square w-full overflow-hidden">
             <Image
@@ -26,7 +26,7 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         </CardHeader>
         <CardContent className="p-4">
-          <h3 className="font-headline text-lg font-medium leading-tight">
+          <h3 className="font-headline text-lg font-medium leading-tight text-foreground">
             {product.title}
           </h3>
           <p className="mt-2 text-base text-muted-foreground">

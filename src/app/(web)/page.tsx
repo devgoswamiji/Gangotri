@@ -10,13 +10,13 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative h-[60vh] min-h-[500px] w-full bg-gradient-to-t from-background via-transparent to-transparent">
+      <section className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-t from-background via-transparent to-transparent">
         <Image
           src="https://placehold.co/1920x1080.png"
           alt="Elegant jewellery on display"
           fill
-          className="-z-10 object-cover brightness-75"
-          data-ai-hint="luxury jewelry background"
+          className="-z-10 object-cover brightness-50"
+          data-ai-hint="luxury jewelry dark background"
           priority
         />
         <div className="container flex h-full flex-col items-center justify-center text-center text-primary-foreground">
@@ -26,7 +26,7 @@ export default function HomePage() {
           <p className="mt-4 max-w-2xl text-lg md:text-xl text-white/90">
             Discover exquisite collections, handcrafted with passion and precision.
           </p>
-          <Button asChild size="lg" className="mt-8 bg-primary/80 hover:bg-primary text-primary-foreground backdrop-blur-sm">
+          <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground backdrop-blur-sm">
             <Link href="/shop">Explore Collections</Link>
           </Button>
         </div>
@@ -53,7 +53,7 @@ export default function HomePage() {
         </div>
       </section>
 
-       <section className="bg-card py-16 md:py-24">
+       <section className="bg-secondary/20 py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8">
             <div className="text-center">
