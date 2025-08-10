@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import type { Product } from '@/lib/types';
+import { Button } from '../ui/button';
 
 interface ProductCardProps {
   product: Product;
@@ -18,10 +19,10 @@ export function ProductCard({ product }: ProductCardProps) {
             <Image
               src={firstVariant.previewImage}
               alt={product.title}
-              width={500}
-              height={500}
+              width={800}
+              height={800}
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              data-ai-hint="jewelry"
+              data-ai-hint="jewelry 3d render"
             />
           </div>
         </CardHeader>
@@ -29,12 +30,15 @@ export function ProductCard({ product }: ProductCardProps) {
           <h3 className="font-headline text-lg font-medium leading-tight text-foreground">
             {product.title}
           </h3>
-          <p className="mt-2 text-base text-muted-foreground">
+          <p className="mt-2 text-base font-medium text-primary/90">
             {new Intl.NumberFormat('en-US', {
               style: 'currency',
               currency: product.currency,
             }).format(firstVariant.price)}
           </p>
+          <Button variant="outline" className="mt-4 w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            View in 360°
+          </Button>
         </CardContent>
       </Card>
     </Link>

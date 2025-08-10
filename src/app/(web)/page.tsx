@@ -18,9 +18,9 @@ export default function HomePage() {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover -z-10 brightness-50"
-          poster="https://placehold.co/1920x1080.png"
+          poster="https://placehold.co/1920x1080/000000/FFFFFF.png"
         >
-          {/* In a real scenario, you'd use a video source */}
+          {/* In a real scenario, you'd use a cinematic video source of models wearing jewelry. */}
           {/* <source src="/path-to-your-video.mp4" type="video/mp4" /> */}
         </video>
 
@@ -32,7 +32,7 @@ export default function HomePage() {
             Discover exquisite collections, handcrafted with passion and precision.
           </p>
           <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground backdrop-blur-sm">
-            <Link href="/shop">Explore Collections</Link>
+            <Link href="/shop">Shop Now</Link>
           </Button>
         </div>
       </section>
