@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import type { Product } from '@/lib/types';
-import { Button } from '../ui/button';
 
 interface ProductCardProps {
   product: Product;

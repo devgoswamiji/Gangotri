@@ -2,6 +2,7 @@ import { products } from '@/lib/data';
 import { ProductDisplayClient } from '@/components/product/product-display-client';
 import { notFound } from 'next/navigation';
 import { ProductCard } from '@/components/product/product-card';
+import { Separator } from '@/components/ui/separator';
 
 interface ProductPageProps {
   params: {
@@ -25,10 +26,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const relatedProducts = products.filter(p => p.id !== product.id && p.collections.some(c => product.collections.includes(c))).slice(0, 4);
 
   return (
-    <div className="container mx-auto px-4 py-12 md:px-6">
+    <div className="container py-12 px-4 md:px-6">
       <ProductDisplayClient product={product} />
 
-      <section className="py-16 md:py-24 border-t mt-16">
+      <Separator className="my-16" />
+
+      <section className="py-16">
         <h2 className="text-center font-headline text-4xl font-bold">
             You Might Also Like
         </h2>

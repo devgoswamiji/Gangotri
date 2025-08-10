@@ -11,7 +11,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { ThreeDViewer } from './three-d-viewer';
-import { ShieldCheck, Truck, Gem, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 interface ProductDisplayProps {
@@ -92,12 +92,12 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
           </Button>
         </div>
 
-        <Accordion type="single" collapsible className="mt-8 w-full">
+        <Accordion type="single" collapsible className="mt-8 w-full" defaultValue="description">
           <AccordionItem value="description">
             <AccordionTrigger className="font-headline text-lg">
               Description
             </AccordionTrigger>
-            <AccordionContent className="prose prose-sm text-muted-foreground">
+            <AccordionContent className="prose prose-sm max-w-none text-muted-foreground">
               {product.longDescription}
             </AccordionContent>
           </AccordionItem>
@@ -106,7 +106,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
               Product Details
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
-              <ul className="list-disc pl-5 space-y-1">
+              <ul className="list-disc space-y-1 pl-5">
                 <li>Metal: {selectedVariant.metal}</li>
                 <li>SKU: {selectedVariant.sku}</li>
                 <li>Hand-crafted in Italy</li>
@@ -118,7 +118,7 @@ export function ProductDisplayClient({ product }: ProductDisplayProps) {
             <AccordionTrigger className="font-headline text-lg">
               Shipping & Returns
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground space-y-2">
+            <AccordionContent className="space-y-2 text-muted-foreground">
                 <p>Complimentary, fully insured shipping on all orders.</p>
                 <p>Hassle-free 30-day returns.</p>
                 <p>Ships in 2-5 business days.</p>

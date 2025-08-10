@@ -14,16 +14,16 @@ export default function HomePage() {
         <Image
           src="https://placehold.co/1920x1080.png"
           alt="Elegant jewellery on display"
-          layout="fill"
-          objectFit="cover"
-          className="-z-10 brightness-75"
+          fill
+          className="-z-10 object-cover brightness-75"
           data-ai-hint="luxury jewelry background"
+          priority
         />
-        <div className="container mx-auto flex h-full flex-col items-center justify-center text-center text-primary-foreground">
-          <h1 className="font-headline text-5xl font-bold md:text-7xl">
+        <div className="container flex h-full flex-col items-center justify-center text-center text-primary-foreground">
+          <h1 className="font-headline text-5xl font-bold md:text-7xl text-white">
             Timeless Elegance, Redefined
           </h1>
-          <p className="mt-4 max-w-2xl text-lg md:text-xl">
+          <p className="mt-4 max-w-2xl text-lg md:text-xl text-white/90">
             Discover exquisite collections, handcrafted with passion and precision.
           </p>
           <Button asChild size="lg" className="mt-8 bg-primary/80 hover:bg-primary text-primary-foreground backdrop-blur-sm">
@@ -33,7 +33,7 @@ export default function HomePage() {
       </section>
 
       <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container px-4 md:px-6">
           <h2 className="text-center font-headline text-4xl font-bold">
             Featured Products
           </h2>
@@ -54,7 +54,7 @@ export default function HomePage() {
       </section>
 
        <section className="bg-card py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8">
             <div className="text-center">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">

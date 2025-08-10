@@ -9,6 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { ShopSort } from '@/components/product/shop-sort';
 
 interface ShopPageProps {
   searchParams: {
@@ -47,11 +48,12 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
   } else if (sort === 'price-desc') {
     filteredProducts.sort((a, b) => b.price - a.price);
   } else if (sort === 'newest') {
-    filteredProducts.sort((a, b) => b.createdAt - a.createdAt);
+    // Assuming createdAt is a timestamp or date-convertible
+    filteredProducts.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
   }
 
   return (
-    <div className="container mx-auto px-4 py-12 md:px-6">
+    <div className="container py-12 px-4 md:px-6">
       <div className="mb-8 text-center">
         <h1 className="font-headline text-5xl font-bold">Our Jewellery</h1>
         <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
@@ -60,16 +62,16 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       </div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
-        <aside className="lg:col-span-1">
+        <div className="lg:col-span-1">
           <ProductFilters />
-        </aside>
+        </div>
 
         <main className="lg:col-span-3">
           <div className="mb-6 flex items-center justify-between">
             <p className="text-sm text-muted-foreground">
               Showing {filteredProducts.length} of {products.length} products
             </p>
-            {/* Sorting functionality can be added here */}
+            <ShopSort />
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {filteredProducts.map((product) => (

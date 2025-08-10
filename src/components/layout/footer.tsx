@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 export function Footer() {
   return (
     <footer className="border-t bg-card">
-      <div className="container mx-auto px-4 py-12 md:px-6">
+      <div className="container py-12 px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link href="/" className="mb-4 inline-flex items-center gap-2">
