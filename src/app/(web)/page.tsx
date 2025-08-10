@@ -3,57 +3,112 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ProductCard } from '@/components/product/product-card';
 import { products } from '@/lib/data';
-import { ShieldCheck, Truck, Gem, Star } from 'lucide-react';
+import { Gem, Star } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function HomePage() {
   const featuredProducts = products.slice(0, 4);
+  const lookbookProducts = products.slice(0, 6);
+  const craftworkProducts = products.slice(0, 5);
+
 
   return (
     <>
-      <section className="relative w-full text-center overflow-hidden bg-gradient-to-b from-background to-amber-50/50 pt-24 pb-32">
+      <section className="relative w-full h-[80vh] min-h-[600px] md:h-screen text-center flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-amber-50/50 pt-20">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 -z-10" />
-        <div className="container text-foreground">
-          <h1 className="font-headline text-5xl font-bold md:text-7xl text-primary">
-            Where Tradition Meets Timeless Elegance
-          </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-foreground/80">
-            Discover exquisite collections, handcrafted with passion and precision.
-          </p>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="relative group overflow-hidden rounded-lg">
-                <Image src="https://placehold.co/600x800.png" alt="Diamond Necklace" width={600} height={800} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-ai-hint="diamond necklace velvet" />
-                <div className="absolute inset-0 bg-black/30 flex items-end p-8">
-                    <h3 className="font-headline text-3xl text-white font-bold">Necklaces</h3>
-                </div>
-            </div>
-             <div className="relative group overflow-hidden rounded-lg">
-                <Image src="https://placehold.co/600x800.png" alt="Gold Bangles" width={600} height={800} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-ai-hint="gold bangles velvet" />
-                <div className="absolute inset-0 bg-black/30 flex items-end p-8">
-                    <h3 className="font-headline text-3xl text-white font-bold">Bangles</h3>
-                </div>
-            </div>
-             <div className="relative group overflow-hidden rounded-lg">
-                <Image src="https://placehold.co/600x800.png" alt="Engagement Rings" width={600} height={800} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-ai-hint="engagement ring velvet" />
-                <div className="absolute inset-0 bg-black/30 flex items-end p-8">
-                    <h3 className="font-headline text-3xl text-white font-bold">Rings</h3>
-                </div>
-            </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10 z-0" />
+        {/* Placeholder for cinematic video loop */}
+        <Image 
+          src="https://placehold.co/1920x1080.png" 
+          alt="Cinematic jewelry background"
+          layout="fill"
+          objectFit="cover"
+          className="absolute inset-0 w-full h-full object-cover -z-20 opacity-30"
+          data-ai-hint="jewelry cinematic lighting"
+        />
+
+        <div className="container text-foreground z-10">
+          <div className="flex items-center justify-center gap-4">
+            <Gem className="h-10 w-10 text-primary" />
+             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-primary">
+              Gangotri Jewellers & Arts
+            </h1>
           </div>
-           <Button asChild size="lg" className="mt-12 bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/shop">Explore Collections</Link>
-          </Button>
+          <p className="mt-4 max-w-3xl mx-auto text-xl md:text-2xl text-foreground/80 font-body">
+            Where Tradition Meets Timeless Brilliance
+          </p>
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-primary/30 transition-shadow duration-300">
+              <Link href="/shop">Explore Collections</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="rounded-full">
+              <Link href="/atelier">Book an Atelier</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container px-4 md:px-6">
-          <h2 className="text-center font-headline text-4xl font-bold text-primary">
-            Featured Collections
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
-            Handpicked from our most beloved collections, these pieces represent the pinnacle of our craft.
-          </p>
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8">
+          <div className="text-center mb-12">
+            <h2 className="text-center font-headline text-4xl font-bold text-primary">
+              Living Lookbook
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
+              Discover inspiration in our curated looks, a blend of timeless elegance and modern style.
+            </p>
+          </div>
+           <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {lookbookProducts.map((_, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="relative group aspect-square overflow-hidden rounded-lg">
+                      <Image 
+                        src={`https://placehold.co/800x800.png`} 
+                        alt="Lookbook" 
+                        width={800} 
+                        height={800} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        data-ai-hint="model jewelry editorial"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <Button variant="secondary">Shop this Look</Button>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex" />
+            <CarouselNext className="hidden sm:flex" />
+          </Carousel>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-secondary/20">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-center font-headline text-4xl font-bold text-primary">
+              Featured Craftworks
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
+              Handpicked from our most beloved collections, these pieces represent the pinnacle of our craft.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -66,7 +121,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-secondary/20 py-16 md:py-24">
+      <section className="bg-background py-16 md:py-24">
         <div className="container px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <div>
@@ -86,7 +141,7 @@ export default function HomePage() {
         </div>
       </section>
 
-       <section className="py-16 md:py-24 bg-background">
+       <section className="py-16 md:py-24 bg-secondary/20">
         <div className="container px-4 md:px-6">
           <h2 className="text-center font-headline text-4xl font-bold text-primary">
             What Our Patrons Say
@@ -118,4 +173,3 @@ export default function HomePage() {
        </section>
     </>
   );
-}
